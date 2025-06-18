@@ -1,4 +1,5 @@
 interface CreateUserRequest {
+  name: string;
   email: string;
   password: string;
 }
@@ -11,7 +12,7 @@ interface CreateUserResponse {
 }
 
 export async function createUser(
-  data: CreateUserRequest,
+  data: CreateUserRequest
 ): Promise<CreateUserResponse> {
   const res = await fetch('/api/users', {
     method: 'POST',

@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 
 interface UserState {
   id: string | null;
@@ -12,6 +12,8 @@ export const useUserStore = create<UserState>((set) => ({
   id: null,
   email: null,
   isAuthenticated: false,
-  login: (id, email) => set({ id, email, isAuthenticated: true }),
-  logout: () => set({ id: null, email: null, isAuthenticated: false }),
+  login: (id, email) =>
+    set({ id, email, isAuthenticated: true }),
+  logout: () =>
+    set({ id: null, email: null, isAuthenticated: false }),
 }));
